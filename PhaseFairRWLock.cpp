@@ -182,7 +182,6 @@ class PhaseFairRWLock {
       // we have timed out.
     } else {  // Put ourselves as unique alarm clock on the list:
       assert(_sleepersEnd == nullptr);
-      assert(_sleepersEnd->next == nullptr);
       _sleepersStart = wac;
       _sleepersEnd = wac;
     }
